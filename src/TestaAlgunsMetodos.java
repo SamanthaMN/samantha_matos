@@ -1,14 +1,14 @@
 public class TestaAlgunsMetodos {
     public static void main(String[] args) {
-        Conta minhaConta;
-        minhaConta = new Conta();
+        Cliente c = new Cliente();
 
-        minhaConta.titular = "Duke";
-        minhaConta.saldo = 1000;
+        Conta minhaConta = new Conta(c);
+
+        minhaConta.setSaldo(1000);
 
         minhaConta.saca(200);
 
         minhaConta.deposita(500);
-        System.out.println(minhaConta.saldo);
+        System.out.println(minhaConta.getSaldo());
     }
 }
